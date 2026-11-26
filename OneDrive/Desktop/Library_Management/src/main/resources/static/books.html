@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Books</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<nav>
+  <h1>📚 Smart Library System</h1>
+  <div class="nav-links">
+    <a href="index.html">Dashboard</a>
+    <a href="books.html" class="active">Books</a>
+    <a href="members.html">Members</a>
+    <a href="transactions.html">Issue / Return</a>
+    <a href="waitlist.html">Waitlist</a>
+  </div>
+</nav>
+<main>
+  <h2>Manage Books</h2>
+  <div id="message" class="message" style="display:none;"></div>
+  <form id="bookForm" class="card-form">
+    <input type="text" id="title" placeholder="Title" required>
+    <input type="text" id="author" placeholder="Author" required>
+    <input type="text" id="isbn" placeholder="ISBN" required>
+    <input type="text" id="category" placeholder="Category">
+    <input type="number" id="totalCopies" placeholder="Total Copies" min="1" required>
+    <button type="submit" id="submitBtn" onclick="addBooks()">Add Book</button>
+    <button type="button" id="cancelEditBtn" style="display:none;">Cancel</button>
+  </form>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search by title or author">
+    <button onclick="searchBooks()">Search</button>
+    <button onclick="loadBooks()">Show All</button>
+  </div>
+  <table id="booksTable">
+    <thead><tr><th>Title</th><th>Author</th><th>ISBN</th><th>Category</th><th>Available/Total</th><th>Actions</th></tr></thead>
+    <tbody id="booksBody"></tbody>
+  </table>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/books.js"></script>
+</body>
+</html>
