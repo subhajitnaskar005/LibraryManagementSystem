@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <h1>📚 Smart Library System</h1>
+  <div class="nav-links">
+    <a href="index.html" class="active">Dashboard</a>
+    <a href="books.html">Books</a>
+    <a href="members.html">Members</a>
+    <a href="transactions.html">Issue / Return</a>
+    <a href="waitlist.html">Waitlist</a>
+  </div>
+</nav>
+<main>
+  <h2>Dashboard</h2>
+  <div class="stats-grid">
+    <div class="stat-card"><h3 id="totalBooks">-</h3><p>Total Books</p></div>
+    <div class="stat-card"><h3 id="totalMembers">-</h3><p>Total Members</p></div>
+    <div class="stat-card"><h3 id="totalIssued">-</h3><p>Books Issued</p></div>
+    <div class="stat-card overdue"><h3 id="totalOverdue">-</h3><p>Overdue Books</p></div>
+    <div class="stat-card"><h3 id="totalWaitlisted">-</h3><p>On Waitlist</p></div>
+    <div class="stat-card fine"><h3 id="totalFine">-</h3><p>Fine Collected (₹)</p></div>
+  </div>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/dashboard.js"></script>
+</body>
+</html>
